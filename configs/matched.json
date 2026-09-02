@@ -1,0 +1,66 @@
+{
+  "profile": "matched",
+  "scenarios": [
+    "baseline",
+    "rolling",
+    "stochastic"
+  ],
+  "seeds": [
+    42,
+    142,
+    242,
+    342,
+    442,
+    542,
+    642,
+    742,
+    842,
+    942
+  ],
+  "lower": [
+    15.0,
+    0.0,
+    300.0,
+    30.0
+  ],
+  "upper": [
+    38.0,
+    800.0,
+    1800.0,
+    95.0
+  ],
+  "slew": [
+    6.0,
+    400.0,
+    500.0,
+    20.0
+  ],
+  "hours": 24,
+  "blocks": 1,
+  "bits_per_variable": 3,
+  "alpha": 1.0,
+  "layers": 3,
+  "shots": 32768,
+  "qaoa_maxiter": 100,
+  "restarts": 1,
+  "backend": "aer",
+  "candidate_k": 50,
+  "retention": "frequency",
+  "population": 185,
+  "generations": 200,
+  "eta": 5.0,
+  "tournament": 5,
+  "elites": 5,
+  "crossover": 0.9,
+  "mutation": 1.0,
+  "jitter": 0.01,
+  "polish": false,
+  "relative_tolerance": null,
+  "consecutive_generations": 5,
+  "penalty_weight": 500.0,
+  "humidity_tracking": 0.5,
+  "fitness_workers": 16,
+  "sa_replicas": 4096,
+  "sa_sweeps": 400,
+  "smoke": false
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qaoa-rcga-manuscript"
+version = "1.0.0"
+description = "QAOA-assisted RCGA and classical greenhouse-control research benchmarks"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = ["Programming Language :: Python :: 3.12", "Intended Audience :: Science/Research"]
+dependencies = ["numpy>=2.0,<3", "scipy>=1.14,<2", "torch>=2.5,<3", "qiskit>=2.0,<3", "qiskit-aer>=0.17,<0.18"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+plots = ["matplotlib>=3.9,<4"]
+
+[project.scripts]
+qaoa-paper = "paper_protocol.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["paper_protocol*", "algorithms*", "environment*"]
+exclude = ["evidence*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]
